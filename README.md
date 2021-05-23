@@ -11,24 +11,36 @@ Used if you need to convert one object to the appearance of another.
 ```ts
 import { MapperItem } from '@avil13/mapper';
 
-// Arrange
+/* Arrange */
+
 const handler = (data: PassportData): string => `${data.name} ${data.surname}`;
 
+interface PassportData {
+  dates: {
+    issueDate: string;
+  };
+  name: string;
+  surname: string;
+}
+
+
+// A class that will map properties
 class Passport {
-  data: PassportData;
+  private data: PassportData;
 
   constructor(data: PassportData) {
     this.data = data;
   }
 
   @MapperItem('data', 'dates.issueDate')
-  issueDate!: string;
+  issueDate!: string;  // Create new property
 
   @MapperItem('data', null, handler)
-  fullName!: string;
+  fullName!: string;   // Create new property
 }
 
-// Act
+/* Act */
+
 const passport = new Passport({
   dates: {
     issueDate: '15.04.1452',
@@ -38,8 +50,25 @@ const passport = new Passport({
 });
 
 
-// Assert
+/* Assert */
+
 passport.issueDate === '15.04.1452' // true
 passport.fullName === 'Leo da Vinci' // true
 ```
 
+That's it, congratulations, things are a little easier now)))
+
+---
+
+And a little bit about the signature
+
+```ts
+MapperItem(
+  // key in target object, if null take the entire object
+  dataPath: string | null,
+  // key in target object, if null take the entire object
+  dataItemPath: string | null,
+  // function that can change the data before retrieving it from the object
+  handler?: (item: any) => any,
+)
+```

@@ -24,6 +24,10 @@
     "type-check:watch": "npm run type-check -- --watch",
     "build": "rm -rf ./dist && rollup -c rollup.config.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avil13/avil13-mapper"
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged && git update-index --again",
@@ -32,7 +36,7 @@
     }
   },
   "lint-staged": {
-    "*.ts": [
+    "src/*.tsx": [
       "eslint --fix --ext .js,.ts"
     ]
   },
@@ -41,7 +45,7 @@
     "@babel/core": "7",
     "@types/jest": "^26.0.20",
     "@types/node": "^14.14.33",
-    "@typescript-eslint/eslint-plugin": "^4.17.0",
+    "@typescript-eslint/eslint-plugin": "^4.24.0",
     "babel-jest": "^26.6.3",
     "dotenv": "^8.2.0",
     "eslint": "^7.21.0",
