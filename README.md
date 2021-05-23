@@ -7,6 +7,16 @@ A simple TypeScript object mapper on decorators.
 
 Used if you need to convert one object to the appearance of another.
 
+## Installation
+
+```sh
+yarn add @avil13/mapper
+
+OR
+
+npm i @avil13/mapper
+```
+
 ## Example:
 ```ts
 import { MapperItem } from '@avil13/mapper';
