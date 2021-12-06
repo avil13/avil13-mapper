@@ -1,11 +1,11 @@
 # @avil13/mapper
 
-![npm bundle size](https://img.shields.io/bundlephobia/minzip/@avil13/mapper)
-![npm version](https://img.shields.io/npm/v/@avil13/mapper)
-
 A simple TypeScript object mapper on decorators.
 
 Used if you need to convert one object to the appearance of another.
+
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/@avil13/mapper)
+![npm version](https://img.shields.io/npm/v/@avil13/mapper)
 
 ## Installation
 

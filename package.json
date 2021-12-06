@@ -13,6 +13,7 @@
     "dist",
     "README.md"
   ],
+  "keywords": ["mapper", "data-mapper", "ts"],
   "scripts": {
     "start": "npm run build && node dist/index.js",
     "dev": "ts-node --project tsconfig.json src/index.ts",
@@ -22,7 +23,8 @@
     "test:watch": "jest --watch",
     "type-check": "tsc -p . --noEmit",
     "type-check:watch": "npm run type-check -- --watch",
-    "build": "rm -rf ./dist && rollup -c rollup.config.js"
+    "build": "rm -rf ./dist && rollup -c rollup.config.js",
+    "prepublishOnly": "yarn test && yarn build"
   },
   "repository": {
     "type": "git",
