@@ -1,6 +1,6 @@
 {
   "name": "@avil13/mapper",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "type": "module",
   "main": "dist/index.common.js",
@@ -13,7 +13,11 @@
     "dist",
     "README.md"
   ],
-  "keywords": ["mapper", "data-mapper", "ts"],
+  "keywords": [
+    "mapper",
+    "data-mapper",
+    "ts"
+  ],
   "scripts": {
     "start": "npm run build && node dist/index.js",
     "dev": "ts-node --project tsconfig.json src/index.ts",
